@@ -1,5 +1,6 @@
 #criar arquivo de seguranca
 #criar role de seguranca
+mkdir logs
 
 aws iam create-role \
     --role-name lambda-exemplo \
@@ -14,7 +15,7 @@ aws lambda create-function \
     --zip-file fileb://function.zip \
     --handler index.handler \
     --runtime nodejs12.x \
-    --role arn:aws:iam::686147129543:role/lambda-exemplo \
+    --role arn:aws:iam::957625058102:role/lambda-exemplo \
     | tee logs/lambda.log
 
 #invoke lambda
