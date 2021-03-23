@@ -10,7 +10,6 @@ const { Transform, Writable, pipeline } = require('stream')
 const { promisify } = require('util')
 const pipelineAsync = promisify(pipeline)
 
-
 const processDataStream = (salaryTypes, finalData) => new Writable({
     write: (chunk, encoding, cb) => {
         const item = JSON.parse(chunk)
